@@ -6,34 +6,94 @@ A web-based Pomodoro timer built to demonstrate the **GSD (Get Shit Done)** work
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue)
 ![Vite](https://img.shields.io/badge/Vite-6.2-purple)
 
+---
+
 ## What is GSD?
 
 **GSD (Get Shit Done)** is a structured workflow system for Claude Code that transforms vague project ideas into shipped software through systematic planning and execution.
 
 ### Core Philosophy
 
-GSD enforces a disciplined approach to AI-assisted development:
-
 1. **Plan before you code** - No jumping straight into implementation
 2. **Phase-based delivery** - Break work into atomic, verifiable chunks
-3. **Goal-backward verification** - Validate that what you built actually achieves the goal
+3. **Goal-backward verification** - Validate that what you built achieves the goal
 4. **Accumulated context** - Maintain project knowledge across sessions
 
-### The GSD Workflow
+---
+
+## The GSD Workflow
+
+GSD follows three distinct phases, each with specific outputs:
 
 ```
-/gsd:new-project     →  Define requirements and constraints
-         ↓
-    ROADMAP.md       →  Phases with success criteria
-         ↓
-/gsd:plan-phase      →  Detailed execution plans (PLAN.md)
-         ↓
-/gsd:execute-phase   →  Build with atomic commits
-         ↓
-    SUMMARY.md       →  Document what was built
-         ↓
-    (repeat)         →  Next phase until complete
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                                                                             │
+│   ┌───────────────┐     ┌───────────────┐     ┌───────────────┐            │
+│   │   DISCOVERY   │     │   PLANNING    │     │   EXECUTION   │            │
+│   │     (Blue)    │────▶│    (Green)    │────▶│     (Red)     │            │
+│   └───────────────┘     └───────────────┘     └───────┬───────┘            │
+│                                                       │                     │
+│   • Questioning         • Requirements               • Execute Tasks       │
+│   • Research            • Roadmap                    • Verify Work         │
+│                         • Plan Tasks                         │              │
+│                               ▲                              │              │
+│                               │      ┌───────────────────────┘              │
+│                               │      │                                      │
+│                               │      ▼                                      │
+│                         ┌─────┴──────────┐                                  │
+│                         │  Gaps found?   │                                  │
+│                         │   Revise plan  │                                  │
+│                         └────────────────┘                                  │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
+
+### Phase 1: Discovery (Blue)
+
+> *Understand what to build through questioning and research*
+
+| Step | What Happens | Output |
+|------|--------------|--------|
+| **Questioning** | GSD asks focused questions about what you want to build, who it's for, and what success looks like | User answers captured |
+| **Research** | GSD researches the domain, identifies patterns, gathers technical context | Domain knowledge for planning |
+
+**Commands:** `/gsd:new-project`
+
+### Phase 2: Planning (Green)
+
+> *Break work into requirements, roadmap, and detailed task plans*
+
+| Step | What Happens | Output |
+|------|--------------|--------|
+| **Requirements** | User needs refined into specific, testable criteria | `PROJECT.md` |
+| **Roadmap** | Work organized into phases with clear dependencies | `ROADMAP.md` |
+| **Plan Tasks** | Each phase gets detailed tasks with verification steps | `PLAN.md` files |
+
+**Commands:** `/gsd:plan-phase`
+
+### Phase 3: Execution (Red)
+
+> *Execute tasks autonomously with continuous verification*
+
+| Step | What Happens | Output |
+|------|--------------|--------|
+| **Execute** | Claude Code executes each task, writes code, runs tests | Working code |
+| **Verify** | Each task verified against criteria | Pass → commit, Fail → fix |
+| **Loop** | If gaps found, revise plan and re-execute | Quality assured |
+
+**Commands:** `/gsd:execute-phase`
+
+### The Critical Feedback Loop
+
+```
+Verify ──────▶ Gaps found? ──────▶ Revise Plan ──────▶ Re-execute
+   │
+   └────────▶ Phase complete ──────▶ Next Phase or Done
+```
+
+**GSD doesn't execute blindly** - it validates each step and course-corrects when something doesn't work as expected.
+
+---
 
 ## This Demo Project
 
@@ -50,6 +110,8 @@ This Pomodoro timer was built in **3 phases** to demonstrate GSD in action:
 - **Quick to build** - Demonstrates full workflow in ~30 minutes
 - **Visual results** - Easy to verify each phase works
 - **Self-running demo** - 30-second timers auto-cycle for presentations
+
+---
 
 ## Exploring the GSD Artifacts
 
@@ -74,9 +136,13 @@ Browse the `.planning/` directory to see how GSD structures a project:
 
 ### Key Documents to Read
 
-1. **[PROJECT.md](.planning/PROJECT.md)** - See how requirements are captured with "Active", "Validated", and "Out of Scope" sections
-2. **[ROADMAP.md](.planning/ROADMAP.md)** - See how phases map to requirements with clear success criteria
-3. **[Any PLAN.md](.planning/phases/03-completion-experience/03-01-PLAN.md)** - See the task breakdown format with verify/done conditions
+| Document | What You'll Learn |
+|----------|-------------------|
+| [PROJECT.md](.planning/PROJECT.md) | How requirements are captured with "Active", "Validated", and "Out of Scope" sections |
+| [ROADMAP.md](.planning/ROADMAP.md) | How phases map to requirements with clear success criteria |
+| [PLAN.md example](.planning/phases/03-completion-experience/03-01-PLAN.md) | Task breakdown format with verify/done conditions |
+
+---
 
 ## Running the Demo
 
@@ -96,9 +162,9 @@ Click **Start** to begin a 30-second countdown. When it completes:
 - 30-second reset countdown begins
 - Auto-cycles between Work and Break modes
 
-## Learning More About GSD
+---
 
-### GSD Commands
+## GSD Command Reference
 
 | Command | Purpose |
 |---------|---------|
@@ -106,24 +172,22 @@ Click **Start** to begin a 30-second countdown. When it completes:
 | `/gsd:plan-phase` | Create detailed execution plan for a phase |
 | `/gsd:execute-phase` | Execute a planned phase with verification |
 | `/gsd:progress` | Check current status and next actions |
+| `/gsd:verify-work` | Validate built features through UAT |
 | `/gsd:help` | See all available commands |
 
-### GSD Principles
+---
 
-**1. Requirements First**
-Before writing code, GSD captures what you're building, why, and what's explicitly out of scope.
+## GSD Principles
 
-**2. Phases Have Goals, Not Just Tasks**
-Each phase has a clear "goal statement" that defines success. Tasks are just the means to achieve that goal.
+| Principle | Description |
+|-----------|-------------|
+| **Requirements First** | Before writing code, capture what you're building, why, and what's out of scope |
+| **Goals Over Tasks** | Each phase has a goal statement. Tasks are just the means to achieve that goal |
+| **Verifiable Plans** | Every task includes `<verify>` steps and `<done>` conditions |
+| **Summaries Capture Reality** | SUMMARY.md documents what was actually built (may differ from plan) |
+| **Persistent State** | PROJECT.md and STATE.md maintain context across sessions |
 
-**3. Plans Are Verifiable**
-Every task includes `<verify>` steps and `<done>` conditions so you know when it's actually complete.
-
-**4. Summaries Capture Reality**
-After execution, SUMMARY.md documents what was actually built (which may differ from the plan).
-
-**5. State Persists Across Sessions**
-PROJECT.md and STATE.md maintain context so you can resume work days later without losing track.
+---
 
 ## Project Structure
 
