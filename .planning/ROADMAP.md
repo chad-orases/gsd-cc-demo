@@ -17,7 +17,7 @@
 **Plans:** 1 plan
 
 Plans:
-- [ ] 01-01-PLAN.md — Initialize React + Vite + TypeScript project
+- [x] 01-01-PLAN.md — Initialize React + Vite + TypeScript project
 
 ### Success Criteria
 
@@ -38,7 +38,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 02-01-PLAN.md — Build timer component with controls and mode toggle
+- [x] 02-01-PLAN.md — Build timer component with controls and mode toggle
 
 ### Success Criteria
 
@@ -61,7 +61,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 03-01-PLAN.md — Add completion state, Rick Astley celebration, reset countdown, and session tracking
+- [x] 03-01-PLAN.md — Add completion state, Rick Astley celebration, reset countdown, and session tracking
 
 ### Success Criteria
 
@@ -77,9 +77,9 @@ Plans:
 
 | Phase | Name | Status | Requirements |
 |-------|------|--------|--------------|
-| 1 | Setup | Pending | INFRA-01, INFRA-02 |
-| 2 | Timer Core | Pending | TIMER-01, TIMER-02, TIMER-03, TIMER-04, TIMER-05, MODE-01, MODE-02, MODE-03 |
-| 3 | Completion Experience | Pending | COMP-01, COMP-02, COMP-03, COMP-04, TRACK-01 |
+| 1 | Setup | Complete | INFRA-01, INFRA-02 |
+| 2 | Timer Core | Complete | TIMER-01, TIMER-02, TIMER-03, TIMER-04, TIMER-05, MODE-01, MODE-02, MODE-03 |
+| 3 | Completion Experience | Complete | COMP-01, COMP-02, COMP-03, COMP-04, TRACK-01 |
 
 **Total Requirements:** 15
 **Mapped:** 15 (100%)

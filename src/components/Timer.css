@@ -1,0 +1,106 @@
+.timer {
+  padding: 2rem;
+  border-radius: 16px;
+  border: 4px solid #ccc;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.timer.work {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.timer.break {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.timer.complete {
+  border-color: #22c55e;
+  background-color: #dcfce7;
+}
+
+.timer.complete .timer-display {
+  color: #15803d;
+}
+
+.timer-display {
+  font-size: 5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  letter-spacing: 0.1em;
+  transition: color 0.3s;
+}
+
+.session-counter {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.mode-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mode-buttons button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  background-color: white;
+}
+
+.mode-buttons button.active {
+  font-weight: bold;
+}
+
+.timer.work .mode-buttons button.active {
+  border-color: #ef4444;
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.timer.break .mode-buttons button.active {
+  border-color: #3b82f6;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.timer.complete .mode-buttons button.active {
+  border-color: #22c55e;
+  background-color: #bbf7d0;
+  color: #15803d;
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.control-buttons button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  min-width: 80px;
+}
+
+.completion-celebration {
+  margin: 1.5rem 0;
+}
+
+.rick-astley {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reset-countdown {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #15803d;
+}

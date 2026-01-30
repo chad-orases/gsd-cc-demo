@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "updated": 1769801781559,
+  "files": {
+    "/Users/chadmacbook/projects/gsd-demo/src/App.tsx": {
+      "exports": [
+        "default",
+        "App"
+      ],
+      "imports": [
+        "./components/Timer",
+        "./App.css"
+      ],
+      "indexed": 1769801682542
+    },
+    "/Users/chadmacbook/projects/gsd-demo/src/components/Timer.tsx": {
+      "exports": [
+        "Timer"
+      ],
+      "imports": [
+        "react",
+        "./Timer.css"
+      ],
+      "indexed": 1769801781559
+    }
+  }
+}
