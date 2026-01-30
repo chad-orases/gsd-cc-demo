@@ -14,6 +14,11 @@
 
 **Requirements:** INFRA-01, INFRA-02
 
+**Plans:** 1 plan
+
+Plans:
+- [ ] 01-01-PLAN.md — Initialize React + Vite + TypeScript project
+
 ### Success Criteria
 
 1. User can open the app URL in a browser and see a page load
