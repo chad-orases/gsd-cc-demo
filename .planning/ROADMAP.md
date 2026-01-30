@@ -35,6 +35,11 @@ Plans:
 
 **Requirements:** TIMER-01, TIMER-02, TIMER-03, TIMER-04, TIMER-05, MODE-01, MODE-02, MODE-03
 
+**Plans:** 1 plan
+
+Plans:
+- [ ] 02-01-PLAN.md — Build timer component with controls and mode toggle
+
 ### Success Criteria
 
 1. User can click Start and watch the timer count down from 00:30
