@@ -12,6 +12,8 @@ A web-based Pomodoro timer built to demonstrate the **GSD (Get Shit Done)** work
 
 **GSD (Get Shit Done)** is a structured workflow system for Claude Code that transforms vague project ideas into shipped software through systematic planning and execution.
 
+📦 **Get GSD:** [github.com/glittercowboy/get-shit-done](https://github.com/glittercowboy/get-shit-done)
+
 ### Core Philosophy
 
 1. **Plan before you code** - No jumping straight into implementation
