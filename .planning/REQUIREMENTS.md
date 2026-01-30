@@ -26,7 +26,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **COMP-01**: Timer turns green when countdown reaches zero
 - [ ] **COMP-02**: Rick Astley image/gif displays on completion
 - [ ] **COMP-03**: 30-second reset countdown starts after completion
-- [ ] **COMP-04**: Next session auto-starts after reset (work↔break toggle)
+- [ ] **COMP-04**: Next session auto-starts after reset (work<->break toggle)
 
 ### Tracking
 
@@ -62,27 +62,27 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | TBD | Pending |
-| INFRA-02 | TBD | Pending |
-| TIMER-01 | TBD | Pending |
-| TIMER-02 | TBD | Pending |
-| TIMER-03 | TBD | Pending |
-| TIMER-04 | TBD | Pending |
-| TIMER-05 | TBD | Pending |
-| MODE-01 | TBD | Pending |
-| MODE-02 | TBD | Pending |
-| MODE-03 | TBD | Pending |
-| COMP-01 | TBD | Pending |
-| COMP-02 | TBD | Pending |
-| COMP-03 | TBD | Pending |
-| COMP-04 | TBD | Pending |
-| TRACK-01 | TBD | Pending |
+| INFRA-01 | Phase 1 | Pending |
+| INFRA-02 | Phase 1 | Pending |
+| TIMER-01 | Phase 2 | Pending |
+| TIMER-02 | Phase 2 | Pending |
+| TIMER-03 | Phase 2 | Pending |
+| TIMER-04 | Phase 2 | Pending |
+| TIMER-05 | Phase 2 | Pending |
+| MODE-01 | Phase 2 | Pending |
+| MODE-02 | Phase 2 | Pending |
+| MODE-03 | Phase 2 | Pending |
+| COMP-01 | Phase 3 | Pending |
+| COMP-02 | Phase 3 | Pending |
+| COMP-03 | Phase 3 | Pending |
+| COMP-04 | Phase 3 | Pending |
+| TRACK-01 | Phase 3 | Pending |
 
 **Coverage:**
 - v1 requirements: 15 total
-- Mapped to phases: 0
-- Unmapped: 15 ⚠️
+- Mapped to phases: 15
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-01-30*
-*Last updated: 2026-01-30 after initial definition*
+*Last updated: 2026-01-30 after roadmap creation*
